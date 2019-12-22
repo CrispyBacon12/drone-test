@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 name: default
@@ -25,3 +26,24 @@ steps:
   - npm build
   depends_on:
   - install
+---
+kind: pipeline
+type: docker
+name: publish
+
+steps:
+- name: publish
+  image: plugins/npm
+  settings:
+    username: CrispyBacon12
+    password:
+      from_secret: github_password
+    email: bob@bob.me
+    registry: "https://npm.pkg.github.com"
+  commands:
+  - npm publish
+
+trigger:
+  branch:
+  - master
+---
