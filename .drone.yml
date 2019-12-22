@@ -47,5 +47,8 @@ depends_on:
 - default
 
 trigger:
+  event:
+    exclude:
+      - pull_request
   branch:
   - master
