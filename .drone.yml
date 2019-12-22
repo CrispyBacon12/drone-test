@@ -3,9 +3,25 @@ type: docker
 name: default
 
 steps:
-- name: npm
+- name: install
   image: node
   commands:
   - npm install
+- name: test
+  image: node
+  commands:
   - npm test
-  - npm run build
+  depends_on:
+  - install
+- name: lint
+  image: node
+  commands:
+  - npm run lint
+  depends_on:
+  - install
+- name: build
+  image: node
+  commands:
+  - npm lint
+  depends_on:
+  - install
