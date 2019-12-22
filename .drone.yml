@@ -22,12 +22,11 @@ steps:
 - name: build
   image: node
   commands:
-  - npm build
+  - npm run build
   depends_on:
   - install
 
 ---
-
 kind: pipeline
 type: docker
 name: publish
@@ -43,8 +42,9 @@ steps:
     registry: "https://npm.pkg.github.com"
   commands:
   - npm publish
-  depends_on:
-  - default
+
+depends_on:
+- default
 
 trigger:
   branch:
