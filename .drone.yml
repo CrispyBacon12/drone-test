@@ -39,7 +39,7 @@ steps:
     password:
       from_secret: github_password
     email: bob@bob.me
-    registry: "https://npm.pkg.github.com"
+    registry: "https://npm.pkg.github.com/CrispyBacon12"
   commands:
   - npm publish
 
