@@ -22,6 +22,6 @@ steps:
 - name: build
   image: node
   commands:
-  - npm lint
+  - npm build
   depends_on:
   - install
