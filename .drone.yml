@@ -44,7 +44,7 @@ steps:
   commands:
   - npm publish
   depends_on:
-    default
+  - default
 
 trigger:
   branch:
