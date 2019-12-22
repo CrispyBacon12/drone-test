@@ -1,6 +1,10 @@
 {
-  "name": "drone-test",
+  "name": "@crispybacon12/drone-test",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CrispyBacon12/drone-test.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -14,7 +18,7 @@
     "react-scripts": "3.3.0",
     "typescript": "^3.7.4"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/CrispyBacon12" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
