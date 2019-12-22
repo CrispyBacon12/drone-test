@@ -48,7 +48,6 @@ depends_on:
 
 trigger:
   event:
-    exclude:
-      - pull_request
+  - push
   branch:
   - master
