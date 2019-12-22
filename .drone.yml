@@ -35,10 +35,10 @@ steps:
 - name: publish
   image: plugins/npm
   settings:
-    username: CrispyBacon12
+    username: chris.purssell@gmail.com
     password:
       from_secret: github_password
-    email: bob@bob.me
+    email: chris.purssell@gmail.com
     registry: "https://npm.pkg.github.com/CrispyBacon12"
   commands:
   - npm publish
