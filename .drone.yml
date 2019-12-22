@@ -26,6 +26,11 @@ steps:
   depends_on:
   - install
 
+trigger:
+  event:
+  - push
+  - tag
+
 ---
 kind: pipeline
 type: docker
@@ -49,5 +54,6 @@ depends_on:
 trigger:
   event:
   - push
+  - tag
   branch:
   - master
